@@ -10,6 +10,7 @@
 #import "Person.h"
 #import "DB.h"
 #import "PersonModel+CoreDataClass.h"
+#import "ViewControllerViewModel.h"
 
 @interface ViewController ()
 
@@ -26,22 +27,32 @@
 
 @implementation ViewController {
     Person* activePerson;
+    ViewControllerViewModel* viewModel;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Person* p = [self fetchPerson];
-    [self mvcShow:p];
+    
+//    MVC
+//    Person* p = [self fetchPerson];
+//    [self mvcShow:p];
+    
+//    MVP
+    viewModel = [[ViewControllerViewModel alloc] init];
+    [self showPerson];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 - (IBAction)onTouchUp:(UIButton *)sender {
-    [self mvcSave];
-    [self mvcShow:activePerson];
+//    MVC
+//    [self mvcSave];
+//    [self mvcShow:activePerson];
+    
+//    MVVM
+    [self saveMVVMPerson];
 }
 
 #pragma mark MVC
@@ -88,8 +99,42 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"PersonModel"];
     NSArray* persons = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     PersonModel* model = persons.firstObject;
-    Person* person = [[Person alloc] initWithPersonModel:model];
+    Person* person = [[Person alloc] initWithName:model.name
+                                              age:[NSNumber numberWithInt:model.age]
+                                             city:model.city 
+                                          country:model.country];
     return person;
+}
+
+#pragma mark MVVM
+/*
+ Fetch: person from ViewModel-class and view-controller classes will get a valid person object.
+     - No DB fetching, No class convertion, Nothing
+     - Just get the direct object to display in UI
+ Save: will be done inside viewModel
+     - will get a saved new object to show it in UI.
+ */
+
+- (void)showPerson {
+    MVVMPerson* person = [viewModel fetchPerson];
+    [self display:person];
+}
+
+- (void)display:(MVVMPerson*)person {
+    if (person) {
+        self.nameLabel.text = person.name;
+        self.ageLabel.text = person.age;
+        self.cityLabel.text = person.city;
+        self.countryLabel.text = person.country;
+    }
+}
+
+- (void)saveMVVMPerson {
+    MVVMPerson* person = [viewModel savePerson:self.nameTextField.text
+                      age:self.ageTextField.text
+                     city:self.cityTextField.text
+                  country:self.countryTextField.text];
+    [self display:person];
 }
 
 @end

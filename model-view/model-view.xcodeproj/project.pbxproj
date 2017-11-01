@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0865FB4F1FA9911D007FDC75 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865FB4E1FA9911D007FDC75 /* Person.m */; };
+		0865FB521FA9A61A007FDC75 /* ViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865FB511FA9A61A007FDC75 /* ViewControllerViewModel.m */; };
+		0865FB551FA9A882007FDC75 /* MVVMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865FB541FA9A882007FDC75 /* MVVMPerson.m */; };
 		08E8F5F91FA982B1004514E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E8F5F81FA982B1004514E5 /* AppDelegate.m */; };
 		08E8F5FC1FA982B1004514E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E8F5FB1FA982B1004514E5 /* ViewController.m */; };
 		08E8F5FF1FA982B1004514E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E8F5FD1FA982B1004514E5 /* Main.storyboard */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		0865FB4D1FA9911D007FDC75 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Person.h; path = "model-view/Person.h"; sourceTree = SOURCE_ROOT; };
 		0865FB4E1FA9911D007FDC75 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = "model-view/Person.m"; sourceTree = SOURCE_ROOT; };
+		0865FB501FA9A61A007FDC75 /* ViewControllerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerViewModel.h; sourceTree = "<group>"; };
+		0865FB511FA9A61A007FDC75 /* ViewControllerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerViewModel.m; sourceTree = "<group>"; };
+		0865FB531FA9A882007FDC75 /* MVVMPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MVVMPerson.h; path = "model-view/MVVMPerson.h"; sourceTree = SOURCE_ROOT; };
+		0865FB541FA9A882007FDC75 /* MVVMPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MVVMPerson.m; path = "model-view/MVVMPerson.m"; sourceTree = SOURCE_ROOT; };
 		08E8F5F41FA982B1004514E5 /* model-view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "model-view.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E8F5F71FA982B1004514E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		08E8F5F81FA982B1004514E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 				08E8F6021FA982B1004514E5 /* LaunchScreen.storyboard */,
 				08E8F6051FA982B1004514E5 /* Info.plist */,
 				08E8F6061FA982B1004514E5 /* main.m */,
+				0865FB501FA9A61A007FDC75 /* ViewControllerViewModel.h */,
+				0865FB511FA9A61A007FDC75 /* ViewControllerViewModel.m */,
 			);
 			path = "model-view";
 			sourceTree = "<group>";
@@ -161,6 +169,8 @@
 				08E8F6371FA98E23004514E5 /* DB.m */,
 				0865FB4D1FA9911D007FDC75 /* Person.h */,
 				0865FB4E1FA9911D007FDC75 /* Person.m */,
+				0865FB531FA9A882007FDC75 /* MVVMPerson.h */,
+				0865FB541FA9A882007FDC75 /* MVVMPerson.m */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -299,8 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0865FB4F1FA9911D007FDC75 /* Person.m in Sources */,
+				0865FB521FA9A61A007FDC75 /* ViewControllerViewModel.m in Sources */,
 				08E8F5FC1FA982B1004514E5 /* ViewController.m in Sources */,
 				08E8F6071FA982B1004514E5 /* main.m in Sources */,
+				0865FB551FA9A882007FDC75 /* MVVMPerson.m in Sources */,
 				08E8F5F91FA982B1004514E5 /* AppDelegate.m in Sources */,
 				08E8F6381FA98E23004514E5 /* DB.m in Sources */,
 				08E8F6311FA98AE0004514E5 /* Core_Data.xcdatamodeld in Sources */,

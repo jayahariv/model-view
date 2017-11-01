@@ -1,24 +1,24 @@
 //
-//  Person.m
+//  MVVMPerson.m
 //  model-view
 //
-//  Created by Jayahari Vavachan on 10/31/17.
+//  Created by Jayahari Vavachan on 11/1/17.
 //  Copyright © 2017 JayahariV. All rights reserved.
 //
 
-#import "Person.h"
+#import "MVVMPerson.h"
 
-@interface Person ()
+@interface MVVMPerson ()
 @property (nonatomic, readwrite) NSString* name;
-@property (nonatomic, readwrite) NSNumber* age;
+@property (nonatomic, readwrite) NSString* age;
 @property (nonatomic, readwrite) NSString* city;
 @property (nonatomic, readwrite) NSString* country;
 @end
 
-@implementation Person
+@implementation MVVMPerson
 
 - (id)initWithName:(NSString *)name
-               age:(NSNumber*)age
+               age:(NSString*)age
               city:(NSString*)city
            country:(NSString*)country {
     self = [super init];
@@ -28,4 +28,5 @@
     _country = country;
     return self;
 }
+
 @end
