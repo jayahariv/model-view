@@ -11,6 +11,8 @@
 #import "DB.h"
 #import "PersonModel+CoreDataClass.h"
 #import "ViewControllerViewModel.h"
+#import "FetchPersonDataViewPresenter.h"
+#import "ShowPersonPresenter.h"
 
 @interface ViewController ()
 
@@ -28,6 +30,8 @@
 @implementation ViewController {
     Person* activePerson;
     ViewControllerViewModel* viewModel;
+    FetchPersonDataViewPresenter* fetchViewPresenter;
+    ShowPersonPresenter* showPersonPresenter;
 }
 
 - (void)viewDidLoad {
@@ -37,9 +41,14 @@
 //    Person* p = [self fetchPerson];
 //    [self mvcShow:p];
     
-//    MVP
+//    MVVM
     viewModel = [[ViewControllerViewModel alloc] init];
     [self showPerson];
+    
+//    MVP
+    [self connectFetchPersonDataViewPresenter];
+    [self connectShowPersonPresenter];
+    [showPersonPresenter showActivePerson];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,7 +61,11 @@
 //    [self mvcShow:activePerson];
     
 //    MVVM
-    [self saveMVVMPerson];
+//    [self saveMVVMPerson];
+    
+//    MVP
+    [fetchViewPresenter save];
+    [showPersonPresenter showActivePerson];
 }
 
 #pragma mark MVC
@@ -138,5 +151,17 @@
 }
 
 #pragma mark MVP
+- (void)connectFetchPersonDataViewPresenter {
+    fetchViewPresenter = [[FetchPersonDataViewPresenter alloc] init];
+    [fetchViewPresenter setName:self.nameTextField
+                            age:self.ageTextField
+                           city:self.cityTextField
+                        country:self.countryTextField];
+}
+
+- (void)connectShowPersonPresenter {
+    showPersonPresenter = [[ShowPersonPresenter alloc] init];
+    [showPersonPresenter setName:self.nameLabel age:self.ageLabel city:self.cityLabel country:self.countryLabel];
+}
 
 @end

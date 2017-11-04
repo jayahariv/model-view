@@ -21,6 +21,8 @@
 		08E8F62B1FA9888B004514E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E8F62A1FA98873004514E5 /* CoreData.framework */; };
 		08E8F6311FA98AE0004514E5 /* Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08E8F62D1FA988C1004514E5 /* Core_Data.xcdatamodeld */; };
 		08E8F6381FA98E23004514E5 /* DB.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E8F6371FA98E23004514E5 /* DB.m */; };
+		08EB5C781FADA1E0000C7D40 /* FetchPersonDataViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EB5C771FADA1E0000C7D40 /* FetchPersonDataViewPresenter.m */; };
+		08EB5C7B1FADA1FC000C7D40 /* ShowPersonPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EB5C7A1FADA1FC000C7D40 /* ShowPersonPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		08E8F62E1FA988C1004514E5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		08E8F6361FA98E23004514E5 /* DB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DB.h; path = "model-view/DB.h"; sourceTree = SOURCE_ROOT; };
 		08E8F6371FA98E23004514E5 /* DB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DB.m; path = "model-view/DB.m"; sourceTree = SOURCE_ROOT; };
+		08EB5C761FADA1E0000C7D40 /* FetchPersonDataViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchPersonDataViewPresenter.h; sourceTree = "<group>"; };
+		08EB5C771FADA1E0000C7D40 /* FetchPersonDataViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchPersonDataViewPresenter.m; sourceTree = "<group>"; };
+		08EB5C791FADA1FC000C7D40 /* ShowPersonPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowPersonPresenter.h; sourceTree = "<group>"; };
+		08EB5C7A1FADA1FC000C7D40 /* ShowPersonPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowPersonPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 		08E8F5F61FA982B1004514E5 /* model-view */ = {
 			isa = PBXGroup;
 			children = (
+				08EB5C751FADA167000C7D40 /* MVVM */,
+				08EB5C741FADA15B000C7D40 /* MVP */,
 				08E8F62C1FA988AC004514E5 /* db */,
 				08E8F5F71FA982B1004514E5 /* AppDelegate.h */,
 				08E8F5F81FA982B1004514E5 /* AppDelegate.m */,
@@ -129,8 +137,6 @@
 				08E8F6021FA982B1004514E5 /* LaunchScreen.storyboard */,
 				08E8F6051FA982B1004514E5 /* Info.plist */,
 				08E8F6061FA982B1004514E5 /* main.m */,
-				0865FB501FA9A61A007FDC75 /* ViewControllerViewModel.h */,
-				0865FB511FA9A61A007FDC75 /* ViewControllerViewModel.m */,
 			);
 			path = "model-view";
 			sourceTree = "<group>";
@@ -173,6 +179,26 @@
 				0865FB541FA9A882007FDC75 /* MVVMPerson.m */,
 			);
 			path = db;
+			sourceTree = "<group>";
+		};
+		08EB5C741FADA15B000C7D40 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				08EB5C761FADA1E0000C7D40 /* FetchPersonDataViewPresenter.h */,
+				08EB5C771FADA1E0000C7D40 /* FetchPersonDataViewPresenter.m */,
+				08EB5C791FADA1FC000C7D40 /* ShowPersonPresenter.h */,
+				08EB5C7A1FADA1FC000C7D40 /* ShowPersonPresenter.m */,
+			);
+			name = MVP;
+			sourceTree = "<group>";
+		};
+		08EB5C751FADA167000C7D40 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				0865FB501FA9A61A007FDC75 /* ViewControllerViewModel.h */,
+				0865FB511FA9A61A007FDC75 /* ViewControllerViewModel.m */,
+			);
+			name = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +337,8 @@
 				0865FB4F1FA9911D007FDC75 /* Person.m in Sources */,
 				0865FB521FA9A61A007FDC75 /* ViewControllerViewModel.m in Sources */,
 				08E8F5FC1FA982B1004514E5 /* ViewController.m in Sources */,
+				08EB5C781FADA1E0000C7D40 /* FetchPersonDataViewPresenter.m in Sources */,
+				08EB5C7B1FADA1FC000C7D40 /* ShowPersonPresenter.m in Sources */,
 				08E8F6071FA982B1004514E5 /* main.m in Sources */,
 				0865FB551FA9A882007FDC75 /* MVVMPerson.m in Sources */,
 				08E8F5F91FA982B1004514E5 /* AppDelegate.m in Sources */,
